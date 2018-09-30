@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="8916"
+           fetch="https://github.com/AndroiableDroid"
+           sync-j="16" />
   <remote  name="aosp"
            fetch=".."
            review="https://android-review.googlesource.com/" />
