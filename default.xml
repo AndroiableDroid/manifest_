@@ -626,5 +626,8 @@
   
   <!-- We dont need -->
   <include name="remove.xml" />
+  
+  <!-- 8916 -->
+  <include name="8916.xml" />
 
 </manifest>
