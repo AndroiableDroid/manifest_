@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <!-- Github remote -->
+    <remote name="github"
+        fetch="https://github.com/" />
+
+    <remote name="8916"
+        fetch="https://github.com/AndroiableDroid"
+        sync-j="16" />
+
+    <!-- general -->
+    <project path="build/kati" name="platform_build_kati" remote="github/LineageOS" revision="lineage-15.1" />
+
+    <project path="build/make" name="build_make" remote="8916" revision="master" >
+        <copyfile src="core/root.mk" dest="Makefile" />
+        <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+        <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+        <linkfile src="core" dest="build/core" />
+        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+        <linkfile src="target" dest="build/target" />
+        <linkfile src="tools" dest="build/tools" />
+    </project>
+    
+    <project path="build/soong" name="platform_build_soong" remote="legacy" revision="android-8.1.0" >
+        <linkfile src="root.bp" dest="Android.bp" />
+        <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+    </project>
+    
+</manifest>
